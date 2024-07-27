@@ -26,7 +26,7 @@ const NavigationData: NavigationItem[] = [
 
 export default function Navigation() {
     return (
-        <div className="z-2 fixed bottom-0 flex h-20 w-full justify-between gap-8 bg-green-700">
+        <div className="z-2 fixed bottom-0 flex h-20 w-full justify-between gap-8 bg-green-700 sm:w-[30rem]">
             {NavigationData.map((item, index) => {
                 const Icon = icons[item.icon];
                 return (

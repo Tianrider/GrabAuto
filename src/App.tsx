@@ -5,14 +5,15 @@ import Navigation from "./components/Navigation";
 
 const App: FC = () => {
     return (
-        <div className="plus-jakarta-sans flex h-screen w-full flex-col">
-            <div className="w-full flex-grow overflow-y-scroll sm:w-[30rem]">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                </Routes>
+        <>
+            <div className="plus-jakarta-sans flex h-screen w-full items-center justify-center">
+                <div className="relative h-full w-full sm:w-[30rem]">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
+                </div>
             </div>
-            <Navigation />
-        </div>
+        </>
     );
 };
 
