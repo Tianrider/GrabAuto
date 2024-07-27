@@ -29,9 +29,9 @@ const Problem: React.FC = () => {
     };
 
     return (
-        <div className="flex h-screen w-full flex-col items-center pt-[7.5rem] relative">
-            <img src={Wrench} className="h-36 absolute left-0 top-1 z-10" />
-            <div className="bg-[#f2f9fb] w-full h-44 absolute z-[-5] top-0"/>
+        <div className="relative flex h-screen w-full flex-col items-center pt-[7.5rem]">
+            <img src={Wrench} className="absolute left-0 top-1 z-10 h-36" />
+            <div className="absolute top-0 z-[-5] h-44 w-full bg-[#f2f9fb]" />
             <div className="w-full px-4">
                 <p className="text-start text-xl font-semibold">
                     What can we help you with?{" "}
@@ -40,7 +40,7 @@ const Problem: React.FC = () => {
                     </a>
                 </p>
             </div>
-            <div className="mt-2 flex h-12 w-[94vw] flex-row space-x-0 mx-4 shadow-md rounded-md overflow-hidden">
+            <div className="mx-4 mt-2 flex h-12 w-[94vw] flex-row space-x-0 overflow-hidden rounded-md shadow-md">
                 <div className="w-full">
                     <input
                         className="h-12 w-full px-4"
