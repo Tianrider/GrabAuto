@@ -1,24 +1,25 @@
 import Navigation from "@/components/Navigation";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { useEffect } from "react";
+import { useState } from "react";
+import ReactMarkdown from "react-markdown";
+
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_AI_API_KEY as string);
 
 const Home: React.FC = () => {
-    const genAI = new GoogleGenerativeAI(
-        "AIzaSyDnSqH16xmI32dm3QeHyHV-rRp-d79G-uk",
-    );
+    const [prompt, setPrompt] = useState<string>("");
+    const [response, setResponse] = useState<string>("");
+
+    const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPrompt(e.target.value);
+    };
 
     const fetchApi = async () => {
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const prompt = "What is the meaning of life?";
         const result = await model.generateContent(prompt);
         const response = result.response;
         const text = response.text();
-        console.log(text);
+        setResponse(text);
     };
-
-    useEffect(() => {
-        fetchApi();
-    }, []);
 
     return (
         <div className="flex h-full w-full flex-col overflow-y-scroll ">
