@@ -4,10 +4,9 @@ import ReactMarkdown from "react-markdown";
 
 import Wrench from "@/assets/wrench.svg";
 
-import Navigation from "../components/Navigation";
 import ProblemCard from "@/components/ProblemCard";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { CardProps } from "types/types";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_AI_API_KEY as string);
@@ -30,7 +29,12 @@ const Problem: React.FC = () => {
 
     return (
         <div className="relative flex h-screen w-full flex-col items-center pt-[7.5rem]">
-            <img src={Wrench} className="absolute left-0 top-1 z-10 h-36" />
+            <img src={Wrench} className="absolute left-52 -top-7 z-10 h-36 rotate-45" />
+            <div className="absolute top-8 left-6">
+                <button>
+                    <ArrowLeft className="scale-125"/>
+                </button>
+            </div>
             <div className="absolute top-0 z-[-5] h-44 w-full bg-[#f2f9fb]" />
             <div className="w-full px-4">
                 <p className="text-start text-xl font-semibold">
