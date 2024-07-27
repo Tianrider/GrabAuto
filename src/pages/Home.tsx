@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import {
     Archive,
-    CircleAlert,
-    CirclePlus,
     Ellipsis,
-    MessageSquare,
     MessageSquareText,
     Navigation,
     Phone,
@@ -12,17 +8,11 @@ import {
     Shield,
     Wrench,
 } from "lucide-react";
-import { icons } from "lucide-react";
 import { useState } from "react";
 
 const Home: React.FC = () => {
     const [isProblem, setIsProblem] = useState(false);
 
-=======
-import Navigation from "@/components/Navigation";
-
-const Home: React.FC = () => {
->>>>>>> 9ad1e054066ce8e7494cf561f5445eb84654c176
     return (
         <div className="flex h-full w-full flex-col items-end justify-between overflow-y-scroll">
             {isProblem && (

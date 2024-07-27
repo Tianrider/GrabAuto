@@ -4,4 +4,10 @@ interface CardProps {
     imageUrl?: string;
 }
 
-export type { CardProps };
+interface ProblemProps {
+    title: string;
+    imgUrl: string;
+    id: number;
+}
+
+export type { CardProps, ProblemProps };
