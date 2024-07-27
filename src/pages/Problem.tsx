@@ -1,5 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useState } from "react";
+import { getProblemNumber } from "@/hooks/useAi";
 import ReactMarkdown from "react-markdown";
 
 import Wrench from "@/assets/wrench.svg";
@@ -12,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import problemsData from "@/data/problemsData";
 
 import "swiper/css";
+import { useNavigate } from "react-router-dom";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_AI_API_KEY as string);
 
@@ -32,18 +34,16 @@ const ProblemSwiper: React.FC = () => {
 
 const Problem: React.FC = () => {
     const [prompt, setPrompt] = useState<string>("");
-    const [response, setResponse] = useState<string>("");
+    const navigate = useNavigate();
 
     const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPrompt(e.target.value);
     };
 
     const fetchApi = async () => {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const result = await model.generateContent(prompt);
-        const response = result.response;
-        const text = response.text();
-        setResponse(text);
+        const result = await getProblemNumber(prompt);
+        navigate(`/analysis/${result}`);
+        console.log(result);
     };
 
     return (
@@ -53,7 +53,7 @@ const Problem: React.FC = () => {
                 className="absolute -top-7 left-52 z-10 h-36 rotate-45"
             />
             <div className="absolute left-6 top-8">
-                <button>
+                <button onClick={() => navigate("/")}>
                     <ArrowLeft className="scale-125" />
                 </button>
             </div>
@@ -71,10 +71,15 @@ const Problem: React.FC = () => {
                     <input
                         className="h-12 w-full px-4 focus:rounded-none"
                         placeholder="I have weird sound coming from my AC..."
+                        value={prompt}
+                        onChange={handlePromptChange}
                     ></input>
                 </div>
 
-                <div className="flex h-12 w-14 items-center justify-center bg-[#6dbb6c]">
+                <div
+                    className="flex h-12 w-14 items-center justify-center bg-[#6dbb6c]"
+                    onClick={fetchApi}
+                >
                     <ArrowRight className="scale-90 text-white" />
                 </div>
             </div>

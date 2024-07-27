@@ -26,6 +26,16 @@ const problemsData: ProblemProps[] = [
         imgUrl: "https://images.unsplash.com/photo-1605198180019-9462e0d30e24?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         id: 5,
     },
+    {
+        title: "Dead Battery",
+        imgUrl: "https://plus.unsplash.com/premium_photo-1681433401553-589104846604?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        id: 6,
+    },
+    {
+        title: "Out of Oil",
+        imgUrl: "https://plus.unsplash.com/premium_photo-1677009541467-5a717c4e9dca?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        id: 7,
+    },
 ];
 
 export default problemsData;

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import locationPinGreen from "../assets/locationPinGreen.svg";
 import locationPinWhite from "../assets/locationPinWhite.svg";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronUp } from "lucide-react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { useNavigate } from "react-router-dom";
 
 interface Location {
     lat: number;
@@ -108,6 +109,7 @@ export default function Mechanics() {
         null,
     );
     const [showMore, setShowMore] = useState(false);
+    const navigate = useNavigate();
 
     const options = {
         method: "GET",
@@ -145,6 +147,15 @@ export default function Mechanics() {
 
     return (
         <div className="flex h-screen w-full items-start bg-gray-200">
+            <div className="z-[2000] absolute top-0 flex w-full gap-4 bg-white px-4 pb-3 pt-4">
+                <ArrowLeft
+                    className="aspect-square h-10 w-10 rounded-full bg-white text-black shadow-2xl"
+                    onClick={() => navigate("/problem")}
+                />
+                <p className="font-bold">
+                    Here's a list of mechanics that are best suited for you
+                </p>
+            </div>
             <div
                 className={`flex w-full items-center justify-center ${
                     showMore ? "h-[5%]" : "h-3/5"
@@ -160,7 +171,7 @@ export default function Mechanics() {
                 />
             </div>
             <div
-                className={`fixed bottom-0 flex w-full flex-col rounded-[10px] bg-white ${
+                className={`rounded-[10px] fixed bottom-0 flex w-full flex-col bg-white ${
                     showMore ? "h-[95%]" : "h-2/5"
                 }`}
             >

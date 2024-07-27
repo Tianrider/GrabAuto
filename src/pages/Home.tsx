@@ -8,10 +8,12 @@ import {
     Shield,
     Wrench,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Home: React.FC = () => {
     const [isProblem, setIsProblem] = useState(false);
+    const Navigate = useNavigate();
 
     return (
         <div className="flex h-full w-full flex-col items-end justify-between overflow-y-scroll">
@@ -27,7 +29,10 @@ const Home: React.FC = () => {
                         >
                             No
                         </button>
-                        <button className="rounded-full border-2 border-yellow-500 bg-yellow-500 px-8 py-2 font-bold text-white">
+                        <button
+                            className="rounded-full border-2 border-yellow-500 bg-yellow-500 px-8 py-2 font-bold text-white"
+                            onClick={() => Navigate("/problem")}
+                        >
                             Yes
                         </button>
                     </div>

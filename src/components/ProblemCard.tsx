@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { CardProps } from "../../types/types";
 
 const ProblemCard: React.FC<CardProps> = (cardProps: CardProps) => {
+
+    const navigate = useNavigate();
+
     return (
-        <div className="m-0 flex h-36 w-full flex-col gap-3 space-y-0 overflow-hidden rounded-lg  p-0">
+        <div className="m-0 flex h-36 w-full flex-col gap-3 space-y-0 overflow-hidden rounded-lg  p-0" onClick={() => navigate(`/mechanics`)}>
             <div className="h-[80%]">
                 <img
                     src={
