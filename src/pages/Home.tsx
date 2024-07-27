@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -21,25 +22,9 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <h1 className="text-5xl font-bold">Response</h1>
-            <input
-                type="text"
-                className="mt-4 w-1/2 rounded-md border  border-gray-300 p-2"
-                placeholder="Enter your prompt"
-                value={prompt}
-                onChange={handlePromptChange}
-            />
-            <button
-                className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white"
-                onClick={fetchApi}
-            >
-                Generate
-            </button>
-            {/* Response */}
-            <div className="mt-4 w-1/2 rounded-md border border-gray-300 p-4">
-                <ReactMarkdown>{response}</ReactMarkdown>
-            </div>
+        <div className="flex h-screen w-full flex-col bg-gray-300">
+            <h1>Home</h1>
+            <Navigation />
         </div>
     );
 };
