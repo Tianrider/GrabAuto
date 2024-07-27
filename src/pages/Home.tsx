@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useEffect } from "react";
 
@@ -20,8 +21,9 @@ const Home: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className="flex h-screen w-full flex-col bg-gray-300">
             <h1>Home</h1>
+            <Navigation />
         </div>
     );
 };
