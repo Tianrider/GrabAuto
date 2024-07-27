@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Problem from "./pages/Problem";
 import Analysis from "./pages/Analysis";
+import APITest from "./api/APITest";
 
 const App: FC = () => {
     return (
@@ -12,7 +13,8 @@ const App: FC = () => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/problem" element={<Problem />} />
-                        <Route path="/analysis" element={<Analysis />} />
+                        <Route path="/analysis" element={<Analysis />} />\
+                        <Route path="/apitest" element={<APITest />} />
                     </Routes>
                 </div>
             </div>
