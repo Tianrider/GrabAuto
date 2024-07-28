@@ -6,7 +6,7 @@ const allProblemData = [
     },
     {
         title: "Empty Fuel Tank",
-        imgUrl: "https://images.unsplash.com/photo-1710880136154-84c23d54ddae?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imgUrl: "https://carpart.com.au/uploads/blog/355068/empty-tank-1678086056.jpeg",
         id: 2,
     },
     {
@@ -30,50 +30,35 @@ const allProblemData = [
         id: 6,
     },
     {
-        title: "Low Coolant Level",
-        imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 7,
-    },
-    {
-        title: "Blown Fuse",
-        imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 8,
-    },
-    {
-        title: "Engine Failure",
-        imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 9,
-    },
-    {
         title: "Brake Failure",
-        imgUrl: "https://images.unsplash.com/photo-1605198180019-9462e0d30e24?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 10,
-    },
-    {
-        title: "Overheating",
-        imgUrl: "https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/dp/images/uploads/Smoking-car-w1.jpg",
-        id: 11,
+        imgUrl: "https://bumper-blog-prod.s3.eu-west-1.amazonaws.com/engine_overheating_12990cc31a.jpg",
+        id: 7,
     },
     {
         title: "Transmission Failure",
         imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 12,
+        id: 8,
     },
     {
         title: "Steering Failure",
         imgUrl: "https://images.unsplash.com/photo-1605198180019-9462e0d30e24?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 13,
+        id: 9,
     },
     {
         title: "Clutch Failure",
         imgUrl: "https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/dp/images/uploads/Smoking-car-w1.jpg",
-        id: 14,
+        id: 10,
     },
     {
         title: "Converter Failure",
         imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 15,
+        id: 11,
     },
+    {
+        title: "Overheating",
+        imgUrl: "https://bumper-blog-prod.s3.eu-west-1.amazonaws.com/engine_overheating_12990cc31a.jpg",
+        id: 12,
+    }
 ];
 
 export default allProblemData;

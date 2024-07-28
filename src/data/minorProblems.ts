@@ -8,7 +8,7 @@ const minorProblems: ProblemProps[] = [
     },
     {
         title: "Empty Fuel Tank",
-        imgUrl: "https://images.unsplash.com/photo-1710880136154-84c23d54ddae?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imgUrl: "https://carpart.com.au/uploads/blog/355068/empty-tank-1678086056.jpeg",
         id: 2,
     },
     {
@@ -32,14 +32,9 @@ const minorProblems: ProblemProps[] = [
         id: 6,
     },
     {
-        title: "Low Coolant Level",
-        imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 7,
-    },
-    {
         title: "Blown Fuse",
         imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        id: 8,
+        id: 7,
     }
 ]
 

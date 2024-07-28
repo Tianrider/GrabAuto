@@ -13,17 +13,17 @@ const commonProblems: ProblemProps[] = [
     },
     {
         title: "Empty Fuel Tank",
-        imgUrl: "https://images.unsplash.com/photo-1710880136154-84c23d54ddae?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imgUrl: "https://carpart.com.au/uploads/blog/355068/empty-tank-1678086056.jpeg",
         id: 3,
     },
     {
         title: "Overheating",
-        imgUrl: "https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/dp/images/uploads/Smoking-car-w1.jpg",
+        imgUrl: "https://bumper-blog-prod.s3.eu-west-1.amazonaws.com/engine_overheating_12990cc31a.jpg",
         id: 4,
     },
     {
         title: "Brake Failure",
-        imgUrl: "https://images.unsplash.com/photo-1605198180019-9462e0d30e24?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imgUrl: "https://carused.jp/blog/wp-content/uploads/2018/10/brake-failure.jpg",
         id: 5,
     },
     {

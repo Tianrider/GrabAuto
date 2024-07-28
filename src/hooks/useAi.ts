@@ -11,7 +11,7 @@ async function getProblemNumber(prompt: string) {
     const config: GenerationConfig = {
         temperature: 0, // Adjust the temperature as needed
         topP: 0.75, // Adjust the topP as needed
-        topK: 10, // Adjust the topK as needed
+        topK: 15, // Adjust the topK as needed
     };
 
     const finalPrompt = `Consider these common problems that cause a car to break down:
@@ -21,15 +21,11 @@ async function getProblemNumber(prompt: string) {
 4. Out of Oil
 5. Faulty Spark Plugs
 6. Radiator Hose Leak
-7. Low Coolant Level
-8. Blown Fuse
-9. Engine Failure
-10. Brake Failure
-11. Overheating
-12. Transmission Failure
-13. Steering Failure
-14. Clutch Failure
-15. Converter Failure
+7. Brake Failure
+8. Transmission Failure
+9. Steering Failure
+10. Clutch Failure
+11. Converter Failure
 
 Based on the following brief description of a car breaking down during driving, identify and conclude by narrowing down to 1 choice of which common problem is the cause. Respond only with the corresponding number of the problem. 
 
