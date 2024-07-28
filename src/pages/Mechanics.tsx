@@ -205,7 +205,10 @@ export default function Mechanics() {
                         boxShadow: "rgba(0, 0, 0, 0.56) 50px 10px 50px 6px",
                     }}
                 >
-                    <p className="w-full rounded-full bg-green-500 py-3 text-center font-bold text-white">
+                    <p
+                        className="w-full cursor-pointer rounded-full bg-green-500 py-3 text-center font-bold text-white"
+                        onClick={() => navigate("/cost")}
+                    >
                         Check Cost Estimation
                     </p>
                 </div>

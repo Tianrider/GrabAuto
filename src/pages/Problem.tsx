@@ -13,6 +13,7 @@ import severeProblems from "@/data/severeProblems";
 import minorProblems from "@/data/minorProblems";
 import { useNavigate } from "react-router-dom";
 import "swiper/css";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_AI_API_KEY as string);
 
@@ -65,18 +66,24 @@ const MinorProblemsSwiper: React.FC = () => {
 const Problem: React.FC = () => {
     const [prompt, setPrompt] = useState<string>("");
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
 
     const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPrompt(e.target.value);
     };
 
     const fetchApi = async () => {
+        setIsLoading(true);
         const result = await getProblemNumber(prompt);
+        localStorage.setItem("prompt", prompt);
         navigate(`/analysis/${result}`);
         console.log(result);
+        setIsLoading(false);
     };
 
     return (
+        <>
+        {isLoading && <LoadingScreen />}
         <div className="relative flex w-full flex-col items-center pt-[7.5rem]">
             <img
                 src={Wrench}
@@ -145,6 +152,7 @@ const Problem: React.FC = () => {
                 <MinorProblemsSwiper />
             </div>
         </div>
+        </>
     );
 };
 
