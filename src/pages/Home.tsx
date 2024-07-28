@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     return (
         <div className="flex h-full w-full flex-col items-end justify-between overflow-y-scroll">
             {isProblem && (
-                <div className="absolute left-[50%] top-[50%] w-2/3 -translate-x-1/2 -translate-y-1/2 transform rounded-[10px] bg-white px-8 py-2 shadow-2xl">
+                <div className="left-[50%] top-[50%] rounded-[10px] absolute w-2/3 sm:w-80 -translate-x-1/2 -translate-y-1/2 transform bg-white px-8 py-2 shadow-2xl">
                     <h1 className="text-center text-lg font-bold">
                         Do You Have Problem With Your Vehicle?
                     </h1>
@@ -54,10 +54,10 @@ const Home: React.FC = () => {
             <img
                 src="https://cdn.discordapp.com/attachments/1264860981838872619/1266715461811179541/WhatsApp_Image_2024-07-27_at_18.14.41_9354ba5b.jpg?ex=66a62834&is=66a4d6b4&hm=9e6ef9126d6016628d45bdaada59287c7e9932b1684cbe9173d491cc03f94ee8&"
                 alt=""
-                className="absolute z-[-1] h-full w-full object-cover"
+                className="z-[-1] md:w-[30vw] absolute h-full w-full object-cover"
             />
             <div className="h-1/2 w-full rounded-xl bg-white shadow-xl">
-                <div className="flex h-[20%] w-full items-center justify-between border-b-2 border-gray-200 px-8">
+                <div className="h-[20%] flex w-full items-center justify-between border-b-2 border-gray-200 px-8">
                     <div className="flex h-full flex-col items-center justify-center">
                         <p className="flex aspect-square h-1/2 w-auto items-center justify-center rounded-full bg-gray-300 text-lg font-bold">
                             2

@@ -66,8 +66,8 @@ const Problem: React.FC = () => {
                     </a>
                 </p>
             </div>
-            <div className="mx-4 mt-2 flex h-12 w-[94vw] flex-row space-x-0 overflow-hidden rounded-md shadow-md">
-                <div className="w-full">
+            <div className="mx-4 mt-2 flex h-12 w-[94vw] sm:w-[28vw] flex-row space-x-0 overflow-hidden rounded-md shadow-md">
+                <div className="w-full sm:w-[30vw]">
                     <input
                         className="h-12 w-full px-4 focus:rounded-none"
                         placeholder="I have weird sound coming from my AC..."

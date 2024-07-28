@@ -146,8 +146,8 @@ export default function Mechanics() {
     };
 
     return (
-        <div className="flex h-screen w-full items-start bg-gray-200">
-            <div className="z-[2000] absolute top-0 flex w-full gap-4 bg-white px-4 pb-3 pt-4">
+        <div className="sm:w-[30vw] flex h-screen w-full items-start">
+            <div className="z-[2000] sm:w-[30vw] absolute top-0 flex w-full  gap-4 bg-white px-4 pb-3 pt-4">
                 <ArrowLeft
                     className="aspect-square h-10 w-10 rounded-full bg-white text-black shadow-2xl"
                     onClick={() => navigate("/problem")}
@@ -157,7 +157,7 @@ export default function Mechanics() {
                 </p>
             </div>
             <div
-                className={`flex w-full items-center justify-center ${
+                className={`sm:w-[30vw] flex w-full items-center justify-center ${
                     showMore ? "h-[5%]" : "h-3/5"
                 }`}
             >
@@ -186,7 +186,7 @@ export default function Mechanics() {
                     )}
                 </div>
                 <div
-                    className={`h-full ${
+                    className={`sm:w-[30vw] h-full w-full ${
                         showMore ? "overflow-y-scroll" : "overflow-y-scroll"
                     }`}
                 >
@@ -200,7 +200,7 @@ export default function Mechanics() {
                     ))}
                 </div>
                 <div
-                    className="flex h-52 items-start justify-center bg-white px-4 py-8"
+                    className="sm:w-[30vw] flex h-52 w-full items-start justify-center bg-white px-4 py-8"
                     style={{
                         boxShadow: "rgba(0, 0, 0, 0.56) 50px 10px 50px 6px",
                     }}
