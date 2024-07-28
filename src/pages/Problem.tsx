@@ -4,23 +4,22 @@ import { getProblemNumber } from "@/hooks/useAi";
 import ReactMarkdown from "react-markdown";
 
 import Wrench from "@/assets/wrench.svg";
-
 import ProblemCard from "@/components/ProblemCard";
-
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { CardProps } from "types/types";
 import { Swiper, SwiperSlide } from "swiper/react";
-import problemsData from "@/data/problemsData";
-
-import "swiper/css";
+import commonProblems from "@/data/commonProblems";
+import severeProblems from "@/data/severeProblems";
+import minorProblems from "@/data/minorProblems";
 import { useNavigate } from "react-router-dom";
+import "swiper/css";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_AI_API_KEY as string);
 
-const ProblemSwiper: React.FC = () => {
+const CommonProblemsSwiper: React.FC = () => {
     return (
         <Swiper slidesPerView={2.5} spaceBetween={10} className="w-full">
-            {problemsData.map((problem) => (
+            {commonProblems.map((problem) => (
                 <SwiperSlide key={problem.id} className="h-fill w-full">
                     <ProblemCard
                         title={problem.title}
@@ -31,6 +30,37 @@ const ProblemSwiper: React.FC = () => {
         </Swiper>
     );
 };
+
+const SevereProblemsSwiper: React.FC = () => {
+    return (
+        <Swiper slidesPerView={2.5} spaceBetween={10} className="w-full">
+            {severeProblems.map((problem) => (
+                <SwiperSlide key={problem.id} className="h-fill w-full">
+                    <ProblemCard
+                        title={problem.title}
+                        imageUrl={problem.imgUrl}
+                    />
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
+}
+
+const MinorProblemsSwiper: React.FC = () => {
+    return (
+        <Swiper slidesPerView={2.5} spaceBetween={10} className="w-full">
+            {minorProblems.map((problem) => (
+                <SwiperSlide key={problem.id} className="h-fill w-full">
+                    <ProblemCard
+                        title={problem.title}
+                        imageUrl={problem.imgUrl}
+                    />
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
+}
+
 
 const Problem: React.FC = () => {
     const [prompt, setPrompt] = useState<string>("");
@@ -87,7 +117,7 @@ const Problem: React.FC = () => {
                 <p className="text-start text-xl font-semibold">
                     Common Problems
                 </p>
-                <ProblemSwiper />
+                <CommonProblemsSwiper />
                 <div className="mt-4 flex h-20 w-full items-center justify-center rounded-xl border-2 border-gray-300">
                     <img
                         src="https://logos-download.com/wp-content/uploads/2018/03/Grab_logo_green.png"
@@ -96,23 +126,23 @@ const Problem: React.FC = () => {
                     />
                 </div>
             </div>
-            <div className="mt-6 flex w-full flex-col gap-4 bg-gradient-to-b from-red-500/50 to-transparent px-4 py-4">
+            <div className="mt-6 flex w-full flex-col gap-4 bg-gradient-to-b from-red-300/50 to-transparent px-4 py-4">
                 <div className="flex w-full items-center justify-between">
-                    <h1 className="text-2xl font-semibold text-red-800">
-                        Severe Problem
+                    <h1 className="text-xl font-semibold text-red-800">
+                        Severe Problems
                     </h1>
                     <ArrowRight className="scale-100 rounded-full bg-red-500/50 p-1 text-white" />
                 </div>
-                <ProblemSwiper />
+                <SevereProblemsSwiper />
             </div>
-            <div className="flex w-full flex-col gap-4 bg-gradient-to-b from-yellow-500/50 to-transparent px-4 py-4">
+            <div className="flex w-full flex-col gap-4 bg-gradient-to-b from-yellow-300/50 to-transparent px-4 py-4">
                 <div className="flex w-full items-center justify-between">
-                    <h1 className="text-2xl font-semibold text-yellow-800">
-                        Medium Problem
+                    <h1 className="text-xl font-semibold text-yellow-800">
+                    Moderate to Minor Problems
                     </h1>
                     <ArrowRight className="scale-100 rounded-full bg-yellow-500/60 p-1 text-white" />
                 </div>
-                <ProblemSwiper />
+                <MinorProblemsSwiper />
             </div>
         </div>
     );
