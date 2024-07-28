@@ -4,9 +4,13 @@ import { CardProps } from "../../types/types";
 const ProblemCard: React.FC<CardProps> = (cardProps: CardProps) => {
 
     const navigate = useNavigate();
+    const handleOnClick = () => {
+        localStorage.setItem("prompt", cardProps.title || "");
+        navigate(`/mechanics`);
+    }
 
     return (
-        <div className="m-0 flex h-36 w-full flex-col gap-3 space-y-0 overflow-hidden rounded-lg  p-0" onClick={() => navigate(`/mechanics`)}>
+        <div className="m-0 flex h-36 w-full flex-col gap-3 space-y-0 overflow-hidden rounded-lg  p-0" onClick={handleOnClick}>
             <div className="h-[80%]">
                 <img
                     src={
