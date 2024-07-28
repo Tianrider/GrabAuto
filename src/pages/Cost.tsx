@@ -10,10 +10,10 @@ export default function Cost() {
             <div className="flex flex-col gap-4">
                 <div className="text-white">
                     <p>
-                        We Estimated that the repair <br /> will cost you:{" "}
+                        We estimated that the repair<br />will cost you about:{" "}
                     </p>
                 </div>
-                <div className="text-[1.8rem] flex w-full items-center justify-center font-bold text-white underline">
+                <div className="text-2xl flex w-full items-center justify-center font-bold text-white">
                     Rp 100.000 - Rp 500.000
                 </div>
             </div>

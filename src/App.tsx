@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import Problem from "./pages/Problem";
 import Analysis from "./pages/Analysis";
 import Mechanics from "./pages/Mechanics";
-import APITest from "./api/APITest";
+import APITest1 from "./api/APITest_Step1";
+import APITest2 from "./api/APITest_Step2";
 import Cost from "./pages/Cost";
 
 const App: FC = () => {
@@ -16,7 +17,8 @@ const App: FC = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/problem" element={<Problem />} />
                         <Route path="/analysis/:id" element={<Analysis />} />\
-                        <Route path="/apitest" element={<APITest />} />
+                        <Route path="/apitest1" element={<APITest1 />} />
+                        <Route path="/apitest2" element={<APITest2 />} />
                         <Route
                             path="/mechanics"
                             element={<Mechanics />}

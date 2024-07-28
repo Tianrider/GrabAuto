@@ -1,14 +1,14 @@
 import { ProblemProps } from "types/types";
 
-const problemsData: ProblemProps[] = [
+const commonProblems: ProblemProps[] = [
     {
         title: "Flat Tire",
-        imgUrl: "https://images.unsplash.com/photo-1507241698564-b4f07193ad5b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imgUrl: "https://img.freepik.com/free-photo/stopped-white-car-with-punctured-car-tire-roadside_651396-2398.jpg?t=st=1722126847~exp=1722130447~hmac=b06f4e228f28f0fc4a5b25677b5b7a77019b55ae41ab85d287b49a3ed06f6f47&w=1800",
         id: 1,
     },
     {
         title: "Engine Failure",
-        imgUrl: "https://images.unsplash.com/photo-1608694385922-2a5173401a2e?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imgUrl: "https://images.pexels.com/photos/24018802/pexels-photo-24018802/free-photo-of-engine-inside-of-a-red-honda.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         id: 2,
     },
     {
@@ -38,4 +38,4 @@ const problemsData: ProblemProps[] = [
     },
 ];
 
-export default problemsData;
+export default commonProblems;
